@@ -5,7 +5,11 @@ class ElementMukhtarov:
         self.symbol = symbol
         self.number = number
 
+    def dump(self):
+        """Метод вывода признаков объекта"""
+        print("Название элемента "+ self.name+ "Химический символ элемента "+ self.symbol+ "Порядковый номер элемента в переодической таблице " +str(self.number))
 
 MyElement=ElementMukhtarov("Кремний ","Si ",14)
 
-print(MyElement.name, MyElement.symbol, MyElement.number)
+
+MyElement.dump()
