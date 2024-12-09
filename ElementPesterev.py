@@ -1,13 +1,25 @@
-def __repr__(self):
-    return f"Element: {self.name} (Symbol: {self.symbol}, Atomic Number: {self.number})"
+class ElementPesterev:
+    def __init__(self, name, symbol, number):
+        # Приватные атрибуты
+        self.__name = name
+        self.__symbol = symbol
+        self.__number = number
+        # Свойства-получатели (геттеры) для каждого атрибута
+    @property
+    def name(self):
+        return self.__name
+    @property
+    def symbol(self):
+        return self.__symbol
 
-def dump(self):
-    # Метод для вывода значений атрибутов объекта
-    print(f"Element Name: {self.name}")
-    print(f"Symbol: {self.symbol}")
-    print(f"Atomic Number: {self.number}")
+    @property
+    def number(self):
+        return self.__number
 
-chlor = ElementPesterev(name="Chlor", symbol="Cl", number=17)
-
-print(chlor)
+    # Метод для вывода значений атрибутов
+    def dump(self):
+        print(f"Element Name: {self.name}")
+        print(f"Symbol: {self.symbol}")
+        print(f"Atomic Number: {self.number}")
+chlor = ElementPesterev("Chlorine", "Cl", 17)
 chlor.dump()
